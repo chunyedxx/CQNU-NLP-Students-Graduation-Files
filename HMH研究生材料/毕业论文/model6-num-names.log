@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdftex 2020.11.25)  25 NOV 2020 14:44
+entering extended mode
+**H:/李月毕业资料/毕业论文/毕业论文11月23日/bibstyle/model6-num
+-names.bst
+
+(H:/李月毕业资料/毕业论文/毕业论文11月23日/bibstyle/model6-num-
+names.bst
+! Undefined control sequence.
+l.64  "\URLprefix
+                  "     'urlprefix :=
+? 
+! Emergency stop.
+l.64  "\URLprefix
+                  "     'urlprefix :=
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

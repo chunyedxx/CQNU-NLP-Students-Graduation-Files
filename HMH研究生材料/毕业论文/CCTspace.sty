@@ -1,0 +1,86 @@
+%
+%  Suppress only spaces between Chinese characters.
+%
+%
+%
+\NeedsTeXFormat{LaTeX2e}[2001/06/01]
+\def\fileversion{1.0.4}
+\def\filedate{2008/06/28}
+\ProvidesPackage{CCTspace}[\filedate\space\fileversion]
+
+\endlinechar \m@ne
+
+\def\CCTspace@stop{}
+
+
+\def\CCT@@ignorespaces{
+    \expandafter\expandafter\expandafter\CCT@@@ignorespaces}
+\let\@CCTpostspace\CCT@@ignorespaces
+
+\def\CCT@@@ignorespaces{
+  \futurelet\CCT@nexttoken\CCT@check@next}
+
+\def\CCT@check@next{
+  \ifx\CCT@nexttoken\@sptoken
+    \expandafter\CCT@@check@next
+  \fi}
+
+{
+  \catcode`\-=11
+  \global\let\-empty\@empty
+
+  %
+  % Define \CCT@@check@next to gobble subsequent space tokens
+  %
+  \def\:{\CCT@@check@next}
+  \global\expandafter\def\: {
+    \futurelet\cct-let-token
+    \cct---check-next}
+
+  %
+  % Since characters in the output of \meaning\something are of
+  % catcode 12, we have to reset the catcodes of `\\, `\C, `\T,  and `\@
+  %
+  \catcode`\/=0
+  \catcode`\C=12
+  \catcode`\T=12
+  \catcode`\@=12
+  \catcode`\\=12
+
+  /gdef/cct---check-next{
+    /expandafter/cct-get-keystring
+     /meaning/cct-let-token\CCT@@@/cct-space-stop
+    /cct-temp}
+
+  /long/gdef/cct-get-keystring#1\CCT@@@#2/cct-space-stop{
+    /edef/cct-temp{#2}
+    /ifx/cct-temp/-empty
+      /def/cct-temp{ }
+    /else                        % the next is a Chinese Character
+      /def/cct-temp{}
+    /fi}
+}
+ 
+%
+% We have to redefine some CCT macros to make this package work.
+%
+\def\@CCTMapChar#1{%
+  \def#1##1{\CCT@@@\ifx \protect \@typeset@protect
+	      \protect \CCTSetChar \protect #1 \protect ##1%
+	    \else \noexpand #1\noexpand ##1\fi}%
+  %
+  % define \#1 as "\ #1" such that, e,g., the sequence "\TeX\ϵͳ" is expanded
+  % into "\TeX\ ϵͳ" ;-)
+  \expandafter\def\csname \string #1\endcsname{\ #1}%
+}
+
+\@CCTcnta "81\relax
+\loop
+  \expandafter\expandafter\expandafter\@CCTMapChar\@CCTbyte{\@CCTcnta}{}\relax
+  \ifnum\@CCTcnta < "0FE \advance\@CCTcnta \@ne
+\repeat
+
+\def\CCT@@@{}
+
+\endlinechar `\^^M
+\endinput 

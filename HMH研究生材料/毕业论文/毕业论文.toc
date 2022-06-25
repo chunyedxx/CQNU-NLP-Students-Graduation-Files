@@ -1,0 +1,32 @@
+\contentsline {chapter}{中文摘要\hskip 1em\relax }{I}
+\contentsline {chapter}{英文摘要\hskip 1em\relax }{II}
+\contentsline {chapter}{\numberline {\ 1\ }绪论}{1}
+\contentsline {section}{\numberline {1.1}研究背景及意义}{1}
+\contentsline {section}{\numberline {1.2}预备知识}{2}
+\contentsline {subsection}{\numberline {1.2.1}共轭方向法}{2}
+\contentsline {subsection}{\numberline {1.2.2}线搜索方法}{2}
+\contentsline {subsection}{\numberline {1.2.3}下降方法的收敛性}{3}
+\contentsline {subsection}{\numberline {1.2.4}一些基本的假设和重要的引理}{4}
+\contentsline {section}{\numberline {1.3}本文的主要工作}{4}
+\contentsline {chapter}{\numberline {\ 2\ }非线性共轭梯度法及相关研究现状}{6}
+\contentsline {section}{\numberline {2.1}经典的共轭梯度法及相关研究}{6}
+\contentsline {section}{\numberline {2.2}谱共轭梯度法及相关研究}{9}
+\contentsline {section}{\numberline {2.3}本章小结}{11}
+\contentsline {chapter}{\numberline {\ 3\ }基于${\tau _k}$选取的修正DK共轭梯度法}{12}
+\contentsline {section}{\numberline {3.1}方法的提出}{12}
+\contentsline {section}{\numberline {3.2}DDK和DDK+算法}{14}
+\contentsline {section}{\numberline {3.3}DDK和DDK+方法的充分下降性}{14}
+\contentsline {section}{\numberline {3.4}DDK和DDK+方法的全局收敛性}{16}
+\contentsline {section}{\numberline {3.5}数值实验}{20}
+\contentsline {section}{\numberline {3.6}本章小结}{25}
+\contentsline {chapter}{\numberline {\ 4\ }基于谱参数的MDDK共轭梯度法}{27}
+\contentsline {section}{\numberline {4.1}方法的提出}{27}
+\contentsline {section}{\numberline {4.2}MDDK算法}{29}
+\contentsline {section}{\numberline {4.3}MDDK方法的充分下降性}{29}
+\contentsline {section}{\numberline {4.4}MDDK方法的全局收敛性}{30}
+\contentsline {section}{\numberline {4.5}数值实验}{33}
+\contentsline {section}{\numberline {4.6}本章小结}{36}
+\contentsline {chapter}{\numberline {\ 5\ }结论及展望}{38}
+\contentsline {chapter}{\numberline {}参考文献}{39}
+\contentsline {chapter}{附\ 录 A\hskip 1em\relax }{43}
+\contentsline {chapter}{致\ 谢\hskip 1em\relax }{44}
